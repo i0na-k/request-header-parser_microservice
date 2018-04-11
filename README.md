@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 Getting the deetz of ya browser
 ==========================
 
@@ -12,7 +12,4 @@ User Story: I can get the IP address, language and operating system for my brows
 
 -------------------
 
-
-=======
 # request-header-parser_microservice
->>>>>>> df74b8ddceb0ade634507c97544d022f5e56b715
