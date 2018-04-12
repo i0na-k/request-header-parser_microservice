@@ -30,7 +30,7 @@ app.get("/whoami", (req, res) => {
   
   var resObj = {
     ip: ip,
-    operatingsystem: req.get('user-agent').substring(startOS+1,stopOS),
+    software: req.get('user-agent').substring(startOS+1,stopOS),
     language: req.get('Accept-language').substring(0,semiCol),
     browser: browser
   };
