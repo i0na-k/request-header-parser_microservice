@@ -15,10 +15,17 @@ var jsonParser = bodyParser.json({ type: 'application/json'});
 app.use(express.static('public'))
 
 // http://expressjs.com/en/starter/basic-routing.html
-app.get("/hello", (req, res) => {
-  console.log('hello,world');
-  res.send('test');
-  console.log(req.get('user-agent'));
+app.get("/whoami", (req, res) => {
+  var ipAddress = req.socket.remoteAddress;
+  var ip = ipAddress.substring(ipAddress.indexOf("1"));
+  var semiCol = req.get('Accept-language').indexOf(';');
+  var resObj = {
+    ip: ip,
+    details: req.get('user-agent'),
+    language: req.get('Accept-language').substring(0,semiCol)
+  };
+
+  res.json(resObj);
 })
 
 
@@ -26,4 +33,3 @@ app.get("/hello", (req, res) => {
 const listener = app.listen(process.env.PORT, () => {
   console.log(`Your app is listening on port ${listener.address().port}`)
 })
-
