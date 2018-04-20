@@ -15,7 +15,7 @@ const bodyParser = require('body-parser')
 app.use(express.static('public'))
 
 // http://expressjs.com/en/starter/basic-routing.html
-app.get("/whoami", (req, res) => {
+app.get("/", (req, res) => {
   var ipAddress = req.socket.remoteAddress;
   var ip = ipAddress.substring(ipAddress.indexOf("1"));
   var semiCol = req.get('Accept-language').indexOf(';');
