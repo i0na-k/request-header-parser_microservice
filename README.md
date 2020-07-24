@@ -1,5 +1,5 @@
 
-Getting the deetz of ya browser
+Getting the details of the browser
 ==========================
 
 Making another backend app as part of the FCC backend certification course :)
